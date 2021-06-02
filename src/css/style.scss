@@ -1,0 +1,42 @@
+// Fonts
+@font-face {
+    font-family: Cyber;
+    src: url("/fonts/Cyberpunk.ttf");
+    font-display: swap;
+  }
+//   @font-face {
+//     font-family: "cyber";
+//     src: url("/font/cyber.eot");
+//     src: url("cyber.ttf") format("ttf"),
+//     }
+// Core
+@import "./core/vars";
+@import "./core/mixins";
+@import "./core/common";
+
+// components-->common
+
+// Components
+
+@import "./src/css/components/header";
+@import "./src/css/components/button";
+@import "./src/css/components/main";
+@import "./src/css/components/history";
+@import "./src/css/components/modal";
+
+@keyframes arrowMove {
+  0%{
+    transform: translateY(0px);
+  }
+  100%{
+    transform: translateY(10px);
+  }
+}
+@keyframes neonBlure {
+  0%{
+    box-shadow: 0px 0px 100px 0px $neon;
+  }
+  100%{
+    box-shadow: 0px 0px 100px 10px $neon;
+  }
+}

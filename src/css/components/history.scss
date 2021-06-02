@@ -1,0 +1,43 @@
+.history {
+  width: 400px;
+  padding: 0px 10px;
+  padding-top: 0px;
+  overflow-y: auto;
+  @include flex-main(column, flex-start, center);
+  @include media-q ($tablet-small){
+    padding-top: 30px;
+  }
+  &__wrapper {
+    width: 100%;
+    @include flex-main(row, space-evenly, flex-start);
+    margin-bottom: 0px;
+    @include media-q ($tablet-small){
+        margin-bottom: 30px;
+      }
+  }
+  &__title {
+    @include font(Cyber, 30px, 400, $yellow);
+  }
+  &__wins {
+    @include flex-main(column, flex-start, center);
+    @include font(Cyber, 20px, 400, $green);
+    min-height: 55px;
+  }
+  &__loses {
+    @include flex-main(column, flex-start, center);
+    @include font(Cyber, 20px, 400, $red);
+    min-height: 55px;
+  }
+  &__queue {
+    width: 90%;
+  }
+  &__result {
+    @include font(Cyber, 15px, 400, white);
+  }
+  &__win-number{
+      font-size: 20px;
+  }
+  &__lose-number{
+    font-size: 20px;
+}
+}

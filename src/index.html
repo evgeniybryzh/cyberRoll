@@ -1,12 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    //= templates/foo.html
-    //= _bar.html
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="shortcut icon" href="images/cyber.ico" type="image/x-icon">
+  <title>CyberRoll</title>
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="header__title">CyberRoll</h1>
+    <div class="history">
+      <h2 class="history__title">Your Results</h2>
+      <div class="history__wrapper">
+        <div class="history__wins">Wins<div class="history__win-number"></div>
+        </div>
+        <div class="history__loses">Loses<div class="history__lose-number"></div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+  <section class="main">
+    <div class="modal__wrapper" id="modal">
+      <div class="modal">
+        <div class="modal__exit" id="exit">X</div>
+        <span class="modal__result" id="result"></span>
+        <button class="btn" id="button-again">
+          <span class="btn__content">Roll_It_Again</span>
+          <span class="btn__glitch"></span>
+          <span class="btn__label">r25</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="main__circle-wrapper">
+      <ul class="circle" id="circle">
+        <li class="circle__part circle__part--1"></li>
+        <li class="circle__part circle__part--2"></li>
+        <li class="circle__part circle__part--3"></li>
+        <li class="circle__part circle__part--4"></li>
+        <li class="circle__part circle__part--5"></li>
+        <li class="circle__part circle__part--6"></li>
+        <li class="circle__center"></li>
+      </ul>
+      <div class="indicator">
+        <svg class="indicator__arrow" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 490 490"
+          style="enable-background:new 0 0 490 490;" xml:space="preserve">
+          <g>
+            <polygon points="428.75,0 428.75,79.89 490,19.803 490,20.261 490,250.051 490,250.053 489.014,251.016 244.996,490 0.986,251.016 
+	      	0,250.053 0,250.051 0,20.261 0,19.803 61.25,79.892 61.25,0.003 244.995,179.906 	" />
+
+          </g>
+        </svg>
+
+      </div>
+    </div>
+
+
+    <div class="bet ">
+
+      <h1 class="bet__title">Make Your Choice:</h1>
+      <div class="bet__box">
+        <input type="radio" class="bet__radio" name="bet-choice" id="bet-red">
+        <label class="bet__checkbox bet__checkbox--red" for="bet-red">1</label>
+        <input type="radio" class="bet__radio" name="bet-choice" id="bet-blue">
+        <label class="bet__checkbox bet__checkbox--blue" for="bet-blue">2</label>
+        <input type="radio" class="bet__radio" name="bet-choice" id="bet-purple">
+        <label class="bet__checkbox bet__checkbox--purple" for="bet-purple">3</label>
+        <input type="radio" class="bet__radio" name="bet-choice" id="bet-pink">
+        <label class="bet__checkbox bet__checkbox--pink" for="bet-pink">4</label>
+        <input type="radio" class="bet__radio" name="bet-choice" id="bet-brown">
+        <label class="bet__checkbox bet__checkbox--brown" for="bet-brown">5</label>
+        <input type="radio" class="bet__radio" name="bet-choice" id="bet-yellow">
+        <label class="bet__checkbox bet__checkbox--yellow" for="bet-yellow">6</label>
+
+      </div>
+      <button class="btn" id="button">
+        <span class="btn__content">Roll_It</span>
+        <span class="btn__glitch"></span>
+        <span class="btn__label">r25</span>
+      </button>
+
+    </div>
+   
+  </section>
+  <script src="js/main.js"></script>
+</body>
+
 </html>

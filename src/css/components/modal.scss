@@ -1,0 +1,42 @@
+.modal {
+    width: 400px;
+    height: 300px;
+    background-color: rgba(6, 24, 44, 0.9);
+    border: 2px solid $neon;
+    z-index: 4;
+    position: absolute;
+    top: calc(50vh - 200px);
+    left: calc(50vw - 200px);
+    border-radius: 5px;
+    @include flex-main(column, center, center);
+    &__result {
+      margin-bottom: 60px;
+      @include font(Cyber, 25px, 400, $yellow);
+    }
+
+    &__wrapper {
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(6, 24, 44, 0.4);
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 3;
+      display: none;
+    }
+    &__exit {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      font-weight: 600;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: 0.3s ease all;
+      @include font(Cyber, 25px, 400, $red);
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }

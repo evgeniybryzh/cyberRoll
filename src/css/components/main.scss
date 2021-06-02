@@ -1,0 +1,170 @@
+.main {
+  min-height: 100vh;
+  padding: 50px 10px 20px 10px;
+  background-color: $dark;
+  overflow: hidden;
+  @include media-q ($tablet-small){
+    padding: 180px 10px 20px 10px;
+  }
+  &__circle-wrapper {
+    position: relative;
+  }
+  .indicator {
+    border: 20px solid $neon;
+    transition: 0.4s ease all;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: calc(50% - 200px);
+    animation: neonBlure 1s linear infinite alternate ;
+    &__arrow {
+      position: absolute;
+      left: calc(50% - 20px);
+      width: 40px;
+      height: 40px;
+      fill: $neon;
+      animation: arrowMove 1s linear infinite alternate ;
+    }
+  }
+
+  .circle {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 100px;
+    transition: 4s cubic-bezier(0, 0, 0.58, 1) all;
+    @include flex-main;
+    &__center {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: white;
+      z-index: 2;
+    }
+    &__part {
+      &--1 {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: -120px;
+        left: 88px;
+        transform: rotate(30deg) skewY(30deg) scale(1.2);
+        background-color: red;
+        z-index: 1;
+      }
+      &--2 {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: -10px;
+        left: -107px;
+        transform: rotate(-30deg) skewY(30deg) scale(1.2);
+        background-color: yellow;
+        z-index: 1;
+      }
+      &--3 {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: -27px;
+        right: -100px;
+        transform: rotate(90deg) skewY(30deg) scale(1.2);
+        background-color: blue;
+        z-index: 1;
+      }
+      &--4 {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        bottom: -120px;
+        left: 105px;
+        transform: rotate(30deg) skewY(30deg) scale(1.2);
+        background-color: pink;
+        z-index: 1;
+      }
+      &--5 {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 214px;
+        left: -97px;
+        transform: rotate(-90deg) skewY(30deg) scale(1.2);
+        background-color: brown;
+        z-index: 1;
+      }
+      &--6 {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        bottom: -5px;
+        right: -105px;
+        transform: rotate(-30deg) skewY(30deg) scale(1.2);
+        background-color: purple;
+        z-index: 1;
+      }
+    }
+  }
+
+  .bet {
+    padding: 20px 0;
+    transition: 0.3s ease all;
+    &__title {
+      text-align: center;
+      margin-bottom: 20px;
+      @include font(Cyber, 35px, 400, $yellow);
+      transition: 0.3s ease all;
+    }
+    &__box {
+      @include flex-main(row, center, center);
+      margin-bottom: 20px;
+      transition: 0.3s ease all;
+    }
+    input {
+      display: none;
+    }
+
+    &__checkbox {
+      width: 80px;
+      height: 50px;
+      margin-right: 10px;
+      border: 5px solid transparent;
+      cursor: pointer;
+      transition: 0.3s ease all;
+      border-radius: 10px;
+      position: relative;
+      &:hover {
+        transform: translateY(5px);
+      }
+      &--red {
+        background-color: red;
+      }
+      &--blue {
+        background-color: blue;
+      }
+      &--purple {
+        background-color: purple;
+      }
+      &--pink {
+        background-color: pink;
+      }
+      &--brown {
+        background-color: brown;
+      }
+      &--yellow {
+        background-color: yellow;
+      }
+    }
+    input[type="radio"]:checked + label {
+      box-shadow: 0px 0px 20px 1px $neon;
+    }
+  }
+  
+}
+
