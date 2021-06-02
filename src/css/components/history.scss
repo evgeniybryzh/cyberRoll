@@ -1,11 +1,12 @@
 .history {
-  width: 400px;
+  width: 300px;
   padding: 0px 10px;
   padding-top: 0px;
   overflow-y: auto;
   @include flex-main(column, flex-start, center);
   @include media-q ($tablet-small){
     padding-top: 30px;
+    width: 400px;
   }
   &__wrapper {
     width: 100%;
