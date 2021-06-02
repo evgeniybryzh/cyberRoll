@@ -3,7 +3,7 @@
   padding: 50px 10px 20px 10px;
   background-color: $dark;
   overflow: hidden;
-  @include media-q ($tablet-small){
+  @include media-q($tablet-small) {
     padding: 180px 10px 20px 10px;
   }
   &__circle-wrapper {
@@ -12,27 +12,36 @@
   .indicator {
     border: 20px solid $neon;
     transition: 0.4s ease all;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     position: absolute;
     z-index: 2;
     top: 0;
-    left: calc(50% - 200px);
-    animation: neonBlure 1s linear infinite alternate ;
+    left: calc(50% - 150px);
+    animation: neonBlure 1s linear infinite alternate;
+    @include media-q($phone-wide) {
+      width: 400px;
+      height: 400px;
+      left: calc(50% - 200px);
+    }
     &__arrow {
       position: absolute;
-      left: calc(50% - 20px);
-      width: 40px;
-      height: 40px;
+      left: calc(50% - 10px);
+      width: 20px;
+      height: 20px;
       fill: $neon;
-      animation: arrowMove 1s linear infinite alternate ;
+      animation: arrowMove 1s linear infinite alternate;
+      @include media-q($phone-wide) {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 
   .circle {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     border: 4px solid white;
     margin: 0 auto;
@@ -40,6 +49,10 @@
     overflow: hidden;
     margin-bottom: 100px;
     transition: 4s cubic-bezier(0, 0, 0.58, 1) all;
+    @include media-q($phone-wide) {
+      width: 400px;
+      height: 400px;
+    }
     @include flex-main;
     &__center {
       width: 20px;
@@ -50,64 +63,98 @@
     }
     &__part {
       &--1 {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
         position: absolute;
-        top: -120px;
-        left: 88px;
+        top: -92px;
+        left: 70px;
         transform: rotate(30deg) skewY(30deg) scale(1.2);
         background-color: red;
         z-index: 1;
+        @include media-q($phone-wide) {
+          width: 200px;
+          height: 200px;
+        }
       }
       &--2 {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
         position: absolute;
         top: -10px;
-        left: -107px;
+        left: -77px;
         transform: rotate(-30deg) skewY(30deg) scale(1.2);
         background-color: yellow;
         z-index: 1;
+        @include media-q($phone-wide) {
+          width: 200px;
+          height: 200px;
+          top: -10px;
+          left: -107px;
+        }
       }
       &--3 {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
         position: absolute;
-        top: -27px;
-        right: -100px;
+        top: -22px;
+        right: -70px;
         transform: rotate(90deg) skewY(30deg) scale(1.2);
         background-color: blue;
         z-index: 1;
+        @include media-q($phone-wide) {
+          width: 200px;
+          height: 200px;
+          top: -27px;
+          right: -100px;
+        }
       }
       &--4 {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
         position: absolute;
-        bottom: -120px;
-        left: 105px;
+        bottom: -100px;
+        left: 80px;
         transform: rotate(30deg) skewY(30deg) scale(1.2);
         background-color: pink;
         z-index: 1;
+        @include media-q($phone-wide) {
+          width: 200px;
+          height: 200px;
+          bottom: -120px;
+          left: 105px;
+        }
       }
       &--5 {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
         position: absolute;
-        top: 214px;
-        left: -97px;
+        top: 155px;
+        left: -63px;
         transform: rotate(-90deg) skewY(30deg) scale(1.2);
         background-color: brown;
         z-index: 1;
+        @include media-q($phone-wide) {
+          width: 200px;
+          height: 200px;
+          top: 214px;
+          left: -97px;
+        }
       }
       &--6 {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
         position: absolute;
-        bottom: -5px;
-        right: -105px;
+        bottom: -4px;
+        right: -75px;
         transform: rotate(-30deg) skewY(30deg) scale(1.2);
         background-color: purple;
         z-index: 1;
+        @include media-q($phone-wide) {
+          width: 200px;
+          height: 200px;
+          bottom: -5px;
+          right: -105px;
+        }
       }
     }
   }
@@ -165,6 +212,4 @@
       box-shadow: 0px 0px 20px 1px $neon;
     }
   }
-  
 }
-
