@@ -35,6 +35,7 @@
       @include media-q($phone-wide) {
         width: 40px;
         height: 40px;
+        left: calc(50% - 20px);
       }
     }
   }
